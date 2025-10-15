@@ -1,3 +1,4 @@
+import "regenerator-runtime/runtime";
 import React, { useState, useEffect } from "react";
 import './../styles/App.css';
 
@@ -24,12 +25,12 @@ function SumCalculator() {
 
     const calculateSum = async () => {
       // simulate async calculation
-      await new Promise((resolve) => setTimeout(resolve, 50));
-
-      if (!isCancelled) {
-        const total = numbers.reduce((acc, num) => acc + num, 0);
-        setSum(total);
-      }
+    new Promise((resolve) => setTimeout(resolve, 50)).then(() => {
+  if (!isCancelled) {
+    const total = numbers.reduce((acc, num) => acc + num, 0);
+    setSum(total);
+  }
+});
     };
 
     calculateSum();
