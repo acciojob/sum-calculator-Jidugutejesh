@@ -53,7 +53,7 @@ function SumCalculator() {
 
   return (
     <div style={{ fontFamily: "Arial", padding: "20px" }}>
-      <h2>Sum Calculator</h2>
+      <h1>Sum Calculator</h1>
       <input
         type="number"
         value={inputValue}
